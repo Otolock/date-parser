@@ -14,9 +14,13 @@ if (currentWeek.test(testSentence)) {
 	}
 
 	console.log(date.format("dddd, MMMM Do YYYY"));
-}
 
-if (nextWeek.test(testSentence)) {
+} else if (/\b(today)\b/gi.test(testSentence)) {
+	let date = moment();
+
+	console.log(date.format('dddd, MMMM Do YYYY'));
+
+} else if (nextWeek.test(testSentence)) {
 	let date = moment().day(testSentence.match(daysOfTheWeek)[0]).add(7, 'days');
 
 	console.log(date.format('dddd, MMMM Do YYYY'));
