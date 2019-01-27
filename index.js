@@ -9,6 +9,10 @@ var testSentence = process.argv[2] || "On monday";
 if (currentWeek.test(testSentence)) {
 	let date = moment().day(testSentence.match(daysOfTheWeek)[0]);
 
+	if (date.diff(moment()) < 0) {
+		date.add(7, 'days');
+	}
+
 	console.log(date.format("dddd, MMMM Do YYYY"));
 }
 
