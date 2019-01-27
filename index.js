@@ -1,6 +1,6 @@
 var moment = require('moment');
 
-var daysOfTheWeek = /\b((mon|tues|wed(nes)?|thur(s)?|fri|sat(ur)?|sun)(day)?)\b/g;
+var daysOfTheWeek = /\b((mon|tues|wed(nes)?|thur(s)?|fri|sat(ur)?|sun)(day)?)\b/gi;
 var currentWeek = /\b(on|this)\b/gi
 var nextWeek = /\b(next|following)\b/gi
 
